@@ -6,7 +6,7 @@ import { Form, Input, Button } from 'antd';
 
 // Zod schema for validation
 const userSchema = z.object({
-  name: z.string().min(3, "Name is required").max(50, "Name must be less than 50 characters"),
+  name: z.string().min(3, "Name must be greater than 2 characters").max(50, "Name must be less than 50 characters"),
   age: z
     .number({ invalid_type_error: "Age must be a number" })
     .min(18, "You must be at least 18 years old")
